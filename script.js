@@ -14,7 +14,7 @@ generateButton.addEventListener("click", writePassword);
 
 function generatePassword() {
     // Asking for length of the password
-    let length = parseInt(prompt("Enter the length of the password (must be between 8 and 128 characters):"));
+    let length = parseInt(prompt("Enter a length for the password between 8 and 128 characters:"));
   
     // Confirming that input is valid
     while (isNaN(length) || length < 8 || length > 128) {
@@ -26,3 +26,9 @@ function generatePassword() {
     let hasUppercase = confirm("Do you want uppercase letters?");
     let hasNumbers = confirm("Do you want numeric characters?");
     let hasSpecial = confirm("Do you want special characters?");
+
+    //Establishes different character sets
+    let lowercase = "abcdefghijklmnopqrstuvwxyz"
+    let uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    let numbers = "123456789"
+    let special= "!@#$%^&*()`~-_=+[{]}|;:,<.>/?"
