@@ -48,3 +48,11 @@ function generatePassword() {
       characters += special
     }
     
+    //Does the selecting of characters from pot and establishes password
+    let password = "";
+    for (i=0; i<length; i++) {
+      let randomcharacters = Math.floor(Math.random() * characters.length);
+      password+= characters[randomcharacters]
+    }
+  return password
+}
