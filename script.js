@@ -32,3 +32,19 @@ function generatePassword() {
     let uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     let numbers = "123456789"
     let special= "!@#$%^&*()`~-_=+[{]}|;:,<.>/?"
+
+    //Compiles selected character sets into one pot
+    let characters = "";
+    if (hasLowercase) {
+      characters += lowercase
+    }
+    if (hasUppercase) {
+      characters += uppercase
+    }
+    if (hasNumbers) {
+      characters += numbers
+    }
+    if (hasSpecial) {
+      characters += special
+    }
+    
